@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
-export default async function (req, res, next) {
+export const protectRoute = async (req, res, next) => {
   const header = req.headers.authorization;
   if (!header) return res.status(401).send('No token');
   const token = header.split(' ')[1];
@@ -13,4 +13,4 @@ export default async function (req, res, next) {
   } catch (err) {
     res.status(401).send('Invalid token');
   }
-}
+};
