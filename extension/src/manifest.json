@@ -4,17 +4,17 @@
   "version": "1.0.0",
   "description": "Track time on sites, block distractions, and sync across devices.",
   "action": {
-    "default_popup": "dist/index.html"
+    "default_popup": "popup/index.html"
   },
   "permissions": ["tabs", "storage", "alarms", "activeTab", "scripting", "notifications"],
   "host_permissions": ["<all_urls>"],
   "background": {
-    "service_worker": "src/background/service_worker.js"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["src/content/contentScript.js"]
+      "js": ["content.js"]
     }
   ]
 }

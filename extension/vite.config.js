@@ -14,18 +14,16 @@ export default defineConfig({
     })
   ],
   build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        popup: resolve(__dirname, 'src/popup/index.html'),
-        background: resolve(__dirname, 'src/background/service_worker.js'),
-        content: resolve(__dirname, 'src/content/contentScript.js')
-      },
-      output: {
-        entryFileNames: '[name].js',
-        assetFileNames: 'assets/[name].[ext]'
-      }
+  rollupOptions: {
+    input: {
+      popup: resolve(__dirname, 'src/popup/index.html'),
+      background: resolve(__dirname, 'src/background/service_worker.js'),
+      content: resolve(__dirname, 'src/content/contentScript.js')
+    },
+    output: {
+      entryFileNames: '[name].js', // Critical - removes assets/ prefix
+      assetFileNames: 'assets/[name].[ext]'
     }
   }
+}
 });
