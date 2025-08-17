@@ -75,16 +75,3 @@ Click Load unpacked
 
 Select the Extension/ folder
 
-📊 Usage
-
-Login / Signup on the web app
-
-Add sites to your blocked list
-
-The extension will automatically:
-
-Track your browsing time
-
-Block distracting sites
-
-Show reports in the dashboard
