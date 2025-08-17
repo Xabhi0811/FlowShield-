@@ -1,88 +1,90 @@
-🌐 FlowShield – Chrome Productivity Tracker
+🚀 FlowShield
 
-FlowShield is a Chrome Extension that helps you stay productive online. It tracks your browsing activity, blocks distracting sites, and provides insightful reports on your daily usage. Built with the MERN stack, it ensures secure data storage, cross-device sync, and a smooth user experience.
-
-📖 Overview
-
-⏱ Tracks time spent on websites
-
-🚫 Blocks distracting sites in real time
-
-📊 Generates daily/weekly productivity reports
-
-🔐 Supports secure user authentication
-
-🌍 Syncs data across devices with MongoDB backend
-
-FlowShield is designed for students, professionals, and teams who want to focus on what truly matters.
+A Chrome Extension + MERN Stack App that helps you stay productive by tracking time spent on websites, blocking distractions, and generating productivity reports.
 
 ✨ Features
 
-Real-time website tracking
+⏱️ Track time spent on websites
 
-Distraction blocking with customizable rules
+🚫 Block distracting sites
 
-Daily & weekly productivity analytics
+📊 Daily/weekly productivity reports
 
-JWT authentication for user security
+🔐 Secure authentication with JWT
 
-React + Tailwind powered clean UI
+⚡ Built using MERN stack + Tailwind CSS
 
-Cloud sync via MongoDB
+🛠️ Tech Stack
 
-🛠 Tech Stack
+Frontend: React + Tailwind CSS
 
-Frontend (Extension)
+Backend: Node.js, Express.js
 
-React.js
+Database: MongoDB (Mongoose)
 
-Tailwind CSS
+Extension: Chrome Extension APIs
 
-Chrome Extension APIs
+Auth: JWT + bcryptjs
 
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB (Mongoose)
-
-JWT Authentication
+📂 Project Structure
+FlowShield/
+│── server/Backend            # Express + MongoDB backend
+│   ├── controllers/    
+│   ├── models/         
+│   ├── routes/         
+│   └── index.js       
+│
+│── extension/Frontend           # React + Tailwind frontend
+│   ├── public/         
+│   ├── src/            
+│   │   ├── components/ 
+│   │   ├── pages/      
+│   │   └── App.jsx     
+│   └── package.json    
+│
+│── Extension/          # Chrome Extension files
+│   ├── manifest.json   
+│   ├── popup.html      
+│   ├── popup.js        
+│   └── background.js   
+│
+└── README.md
 
 ⚙️ Installation
-🔹 1. Clone Repo
+1️⃣ Clone the repository
 git clone https://github.com/Xabhi0811/FlowShield.git
 cd FlowShield
 
-🔹 2. Setup Backend
-cd backend
+2️⃣ Backend Setup
+cd server
 npm install
+npm start
 
-
-Create .env file inside backend/:
-
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
-
-
-Run backend:
-
+3️⃣ Frontend Setup
+cd extension
+npm install
 npm run dev
 
-🔹 3. Setup Frontend
-cd frontend
-npm install
-npm run build
+4️⃣ Chrome Extension Setup
 
-🔹 4. Load Extension in Chrome
-
-Open Chrome → chrome://extensions/
+Open Chrome → Extensions → Manage Extensions
 
 Enable Developer Mode
 
-Click Load Unpacked
+Click Load unpacked
 
-Select frontend/dist
+Select the Extension/ folder
 
+📊 Usage
+
+Login / Signup on the web app
+
+Add sites to your blocked list
+
+The extension will automatically:
+
+Track your browsing time
+
+Block distracting sites
+
+Show reports in the dashboard
